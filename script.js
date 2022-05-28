@@ -13,13 +13,12 @@ var productsList = [
 productsList.map(item=>{
     const element = document.createElement("div")
     element.setAttribute("id","item-"+item.id)
-    element.setAttribute("class", "")
-    element.setAttribute("style", "height:400px")
-    element.innerHTML= `<div class="">
-                    <div class="images"></div>
-                    <div class="">
-                        <p class="title">title</p>
-                        <div class ="price">price</div>
+    element.setAttribute("class", "col-12 col-md-4 col-lg-3 my-3")
+    element.innerHTML= `<div class="mx-2 border border-2 p-3 border-dark rounded h-100">
+                    <div class="images rounded mx-auto d-block"></div>
+                    <div class="d-flex justify-content-between">
+                        <p class="title fw-bold">title</p>
+                        <div class ="price fw-bold">price</div>
                     </div>
                     <p class="description"> description</p>
                 </div>`
@@ -34,6 +33,7 @@ productsList.map(item=>{
         const imageElement = document.createElement("img")
         imageElement.setAttribute('src',image)
         imageElement.setAttribute('width',100)
+        imageElement.setAttribute("class", "rounded mx-auto d-block")
         document.querySelector(`#item-${item.id} .images`).appendChild(imageElement)
     })
 

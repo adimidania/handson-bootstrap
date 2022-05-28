@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="script.js" defer></script>
+    <title>CLA Phones Shop</title>
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0">
+    <!-- Navigation bar-->
+    <div class="container-fluid bg-dark p-4 text-center position-sticky top-0" style="z-index: 100;">
+      <div class="row">
+        <p class="h2 text-white" style="font-weight:300;">Welcome to CLA Shop</p>
+      </div>
+    </div>
+    <!-- List of products & Form -->
+    <main class="m-3">
+      <!-- List of products -->
+      <h1 class="text-center my-3">List of products</h1>
+      <div>
+        <div id="items" class="container d-flex flex-wrap"></div>
+      </div>
+      <hr/>
+      <!-- Form -->
+      <h1 class="text-center my-3">Add a product</h1>
+      <div class="container w-100 d-flex justify-content-center">
+        <form class="w-75">
+          <div class="form-group my-2">
+            <label for="name">Name</label>
+            <input type="text" class="form-control my-1" id="name" placeholder="Enter the name">
+          </div>
+          <div class="form-group my-2">
+            <label for="Price">Price</label>
+            <input type="text" class="form-control my-1" id="Price" placeholder="Price">
+          </div>
+          <div class="form-group my-2">
+            <label for="description">Description</label>
+            <textarea class="form-control my-1" id="description" rows="3"></textarea>
+          </div>
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#IdentityModal">Confirm identity</button>
+        </form>
+      </div>
+      <!-- Model-->
+      <div class="modal fade" id="IdentityModal" tabindex="-1" role="dialog" aria-labelledby="IdentityModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">identity confirmation</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Please enter your E-mail so you can follow the identity confirmation procedure</p>
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted my-1">We'll never share your email with anyone else.</small>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark">Send</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
