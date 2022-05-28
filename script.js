@@ -15,7 +15,7 @@ productsList.map(item=>{
     element.setAttribute("id","item-"+item.id)
     element.setAttribute("class", "col-12 col-md-4 col-lg-3 my-3")
     element.innerHTML= `<div class="mx-2 border border-2 p-3 border-dark rounded h-100">
-                    <div class="images rounded mx-auto d-block"></div>
+                    <div class="images d-flex" style="height:175px;"></div>
                     <div class="d-flex justify-content-between">
                         <p class="title fw-bold">title</p>
                         <div class ="price fw-bold">price</div>
@@ -33,7 +33,7 @@ productsList.map(item=>{
         const imageElement = document.createElement("img")
         imageElement.setAttribute('src',image)
         imageElement.setAttribute('width',100)
-        imageElement.setAttribute("class", "rounded mx-auto d-block")
+        imageElement.setAttribute("class", "rounded mx-auto my-auto d-block")
         document.querySelector(`#item-${item.id} .images`).appendChild(imageElement)
     })
 
